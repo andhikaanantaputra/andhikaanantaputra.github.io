@@ -3,124 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile - Your Name</title>
+    <title>Website Portofolio Pribadi</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* CSS untuk animasi dan pop-up */
-        .popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            width: 300px;
-            text-align: center;
-            animation: popupAnim 0.5s ease-out;
-        }
-
-        .popup.open {
-            display: block;
-        }
-
-        /* Animasi pop-up */
-        @keyframes popupAnim {
-            from {
-                opacity: 0;
-                transform: translate(-50%, -60%);
-            }
-            to {
-                opacity: 1;
-                transform: translate(-50%, -50%);
-            }
-        }
-
-        /* Tombol close untuk pop-up */
-        .close-btn {
-            background-color: red;
-            color: white;
-            padding: 5px 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        .close-btn:hover {
-            background-color: darkred;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
-        <h1>About Me</h1>
-
-        <div class="profile-content">
-            <div class="profile-photo">
-                <img src="https://corsyava.com/wp-content/uploads/2023/09/LINE_ALBUM_Instagram-Oniel_230911_241-1024x1024.jpg" alt="Your Photo" class="profile-image">
-            </div>
-            <div class="profile-details">
-                <p><strong>Name:</strong> Jeananda Andhika Ananta Putra</p>
-                <p><strong>Date of Birth:</strong> 24, January, 2004</p>
-                <p><strong>Education:</strong> 
-                    <span id="education-info" class="education-info" onclick="toggleEducationPopup()">Click Here</span>
-                </p>
-                <p><strong>Currently Learning:</strong> I'm learning about networking systems and some programming like laravel, flutter, and Android. I am also studying cyber and data security. </p>
-                <p><strong>Goals:</strong> I want to create a new digital world with very strong security, because in recent years digital attacks have really happened frequently because the security system is very minimal at the moment.</p>
-                <p><strong>Other Information:</strong>
-                    <span id="my-info" class="education-info" onclick="toggleInfoPopup()">Click Here</span>
-                </p>
-            </div>
-        </div>
-
-        <!-- Pop-up pilihan untuk pendidikan -->
-        <div id="education-popup" class="popup">
-            <h3>My Education</h3>
-            <ul>
-                <li>Junior School: SDN Cempaka Baru 03 Pagi Jakarta</li>
-                <li>Junior High School: PKBM Sanggar Puri Bekasi Kab.</li>
-                <li>High School: SMAN 9 Tambun Selatan Bekasi Kab.</li>
-            </ul>
-            <button class="close-btn" onclick="closeEducationPopup()">Close</button>
-        </div>
-        <div id="info-popup" class="popup">
-            <h3>My Information</h3>
-            <ul>
-                <li>My name is Jeananda Andhika Ananta Putra, my friends often call me Jean or Jeje, in my family I am known as Dhika. I am a teenager who grew up and developed together with the world of technology, therefore I am very interested in anything based on technology. Starting from grade 6 junior school I have studied various things about technology such as programming and pentesting. Currently, I am running the bootcamp program from itbox.id and completing certification. Then I am also in the process of getting CEH, OSCP, and various other certificates.</li>
-            </ul>
-            <button class="close-btn" onclick="closeInfoPopup()">Close</button>
+        <h1>Welcome to My Portfolio</h1>
+        <div class="link-group">
+            <a href="/porto/profile/" class="profile-link">Go to My Profile</a>
+            <a href="/porto/exp/" class="profile-link">My Experience</a>
         </div>
         <div class="social-media-links">
-            <a href="https://www.instagram.com/yourprofile" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/jeananda_andhika" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.facebook.com/yourprofile" class="social-link" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="https://x.com/yourprofile" class="social-link" target="_blank"><i class="fab fa-x"></i></a>
         </div>
     </div>
-
-    <script>
-        function toggleEducationPopup() {
-            const popup = document.getElementById('education-popup');
-            popup.classList.toggle('open');
-        }
-
-        function closeEducationPopup() {
-            const popup = document.getElementById('education-popup');
-            popup.classList.remove('open');
-        }
-
-        function toggleInfoPopup() {
-            const popup = document.getElementById('info-popup');
-            popup.classList.toggle('open');
-        }
-
-        function closeInfoPopup() {
-            const popup = document.getElementById('info-popup');
-            popup.classList.remove('open');
-        }
-    </script>
 </body>
 </html>
