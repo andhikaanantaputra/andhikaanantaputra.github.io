@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience</title>
+    <title>My Experience</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <h1>Coming Soon</h1>
+        <h1>My Experience</h1>
+        <div class="certificate-slider">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <div class="certificate-container">
+                <img src="/certificate/sert1.png" class="certificate-frame active">
+                <img src="/certificate/idhost.png" class="certificate-frame">
+                <img src="https://is3.cloudhost.id/percobaansaja/foto_s3/photo_2025-01-11_14-41-28.jpg" class="certificate-frame">
+            </div>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
         </div>
         <div class="social-media-links">
             <a href="https://www.instagram.com/jeananda_andhika" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -17,5 +25,29 @@
             <a href="https://x.com/yourprofile" class="social-link" target="_blank"><i class="fab fa-x"></i></a>
         </div>
     </div>
+    
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll(".certificate-frame");
+        function showSlide(i) {
+            slides.forEach((slide, idx) => {
+                slide.classList.remove("active");
+                if (idx === i) {
+                    slide.classList.add("active");
+                }
+            });
+        }
+        function prevSlide() {
+            index = (index - 1 + slides.length) % slides.length;
+            showSlide(index);
+        }
+        function nextSlide() {
+            index = (index + 1) % slides.length;
+            showSlide(index);
+        }
+
+// Tampilkan slide pertama saat halaman dimuat
+showSlide(index);
+</script>
 </body>
 </html>
